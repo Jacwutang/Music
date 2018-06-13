@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
     if user.nil?
       flash.now[:errors] = ["Wrong Credentials"]
-      redirect_to new_session_url
+      render :new
     else
       login_user!(user)
         #redirect to user show page
