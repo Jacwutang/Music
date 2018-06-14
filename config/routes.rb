@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :albums
   root 'sessions#new'
   resources :users, only: [:create,:new,:show]
   resources :bands
