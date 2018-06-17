@@ -7,8 +7,12 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :email, :session_token, uniqueness: true
 
+  
 
 
+
+
+  #callbacks
   before_validation :ensure_session_token
 
 
