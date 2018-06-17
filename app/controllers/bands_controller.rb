@@ -1,8 +1,8 @@
 class BandsController < ApplicationController
-  before_action :set_band, only: [:show, :edit, :update, :destroy]
+  before_action :require_current_user!
 
   # GET /bands
-  
+
   def index
     @bands = Band.all
   end
